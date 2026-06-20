@@ -1,0 +1,179 @@
+[
+  {
+    "emoji": "🍚",
+    "label": "rice"
+  },
+  {
+    "emoji": "🍚",
+    "label": "parboiled rice"
+  },
+  {
+    "emoji": "🍚",
+    "label": "basmati rice"
+  },
+  {
+    "emoji": "🍚",
+    "label": "brown rice"
+  },
+
+  {
+    "emoji": "🍗",
+    "label": "chicken"
+  },
+  {
+    "emoji": "🍗",
+    "label": "turkey"
+  },
+  {
+    "emoji": "🥩",
+    "label": "beef"
+  },
+  {
+    "emoji": "🐟",
+    "label": "catfish"
+  },
+  {
+    "emoji": "🐟",
+    "label": "fish"
+  },
+  {
+    "emoji": "🐟",
+    "label": "stockfish"
+  },
+  {
+    "emoji": "🐟",
+    "label": "smoked fish"
+  },
+
+  {
+    "emoji": "🧅",
+    "label": "onion"
+  },
+  {
+    "emoji": "🧅",
+    "label": "onions"
+  },
+  {
+    "emoji": "🌶️",
+    "label": "pepper"
+  },
+  {
+    "emoji": "🫑",
+    "label": "red bell pepper"
+  },
+  {
+    "emoji": "🍅",
+    "label": "tomatoes"
+  },
+  {
+    "emoji": "🍅",
+    "label": "tomato"
+  },
+
+  {
+    "emoji": "🥚",
+    "label": "eggs"
+  },
+  {
+    "emoji": "🥚",
+    "label": "eggs (optional)"
+  },
+
+  {
+    "emoji": "🛢️",
+    "label": "palm oil"
+  },
+  {
+    "emoji": "🛢️",
+    "label": "groundnut oil"
+  },
+  {
+    "emoji": "🛢️",
+    "label": "vegetable oil"
+  },
+
+  {
+    "emoji": "🫘",
+    "label": "black-eyed beans"
+  },
+  {
+    "emoji": "🫘",
+    "label": "brown beans"
+  },
+  {
+    "emoji": "🫘",
+    "label": "white beans"
+  },
+
+  {
+    "emoji": "🌰",
+    "label": "egusi seeds"
+  },
+  {
+    "emoji": "🌰",
+    "label": "melon seeds"
+  },
+
+  {
+    "emoji": "🍠",
+    "label": "yam"
+  },
+  {
+    "emoji": "🍠",
+    "label": "yam paste"
+  },
+  {
+    "emoji": "🍠",
+    "label": "pounded yam"
+  },
+
+  {
+    "emoji": "🧄",
+    "label": "garlic"
+  },
+  {
+    "emoji": "🥕",
+    "label": "mixed vegetables"
+  },
+  {
+    "emoji": "🥬",
+    "label": "spinach"
+  },
+  {
+    "emoji": "🌿",
+    "label": "uziza leaves"
+  },
+  {
+    "emoji": "🌿",
+    "label": "utazi leaves"
+  },
+  {
+    "emoji": "🌿",
+    "label": "bitter leaves"
+  },
+  {
+    "emoji": "🥬",
+    "label": "lettuce"
+  },
+
+  {
+    "emoji": "🍅",
+    "label": "Tomatoes"
+  },
+  {
+    "emoji": "🥚",
+    "label": "Eggs"
+  },
+  {
+    "emoji": "🧅",
+    "label": "Onions"
+  },
+  {
+    "emoji": "🍗",
+    "label": "Chicken"
+  },
+  {
+    "emoji": "🧄",
+    "label": "Garlic"
+  }
+]

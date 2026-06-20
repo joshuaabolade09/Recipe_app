@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply rounded-full border border-stone-200 px-4 py-2 text-sm transition-all duration-300 placeholder:text-stone-400 focus:outline-none focus:ring focus:ring-yellow-400 md:px-6 md:py-3;
+  }
+
+  .loader {
+    width: 45px;
+    aspect-ratio: 0.75;
+    --c: no-repeat linear-gradient(theme(colors.stone.800) 0 0);
+    background: var(--c) 0% 50%, var(--c) 50% 50%, var(--c) 100% 50%;
+    background-size: 20% 50%;
+    animation: loading 1s infinite linear;
+  }
+
+  @keyframes loading {
+    20% {
+      background-position: 0% 0%, 50% 50%, 100% 50%;
+    }
+    40% {
+      background-position: 0% 100%, 50% 0%, 100% 50%;
+    }
+    60% {
+      background-position: 0% 50%, 50% 100%, 100% 0%;
+    }
+    80% {
+      background-position: 0% 50%, 50% 50%, 100% 100%;
+    }
+  }
+}
+
+.recipe-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recipe-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(191, 109, 43, .25);
+  border-radius: 999px;
+}
+
+.hero-crop {
+  height: clamp(134px, 37.1vw, 267px);
+}
+
+.hero-crop img {
+  width: 100%;
+  height: auto;
+  transform: translateY(calc(-1 * min(100vw, 720px) * .0847)) scale(1.015);
+  animation: heroScreenshotFloat 10s ease-in-out infinite;
+}
+
+@keyframes heroScreenshotFloat {
+  0%, 100% {
+    transform: translateY(calc(-1 * min(100vw, 720px) * .0847)) scale(1.015);
+  }
+
+  50% {
+    transform: translateY(calc(-1 * min(100vw, 720px) * .092)) scale(1.035);
+  }
+  
+}
+body {
+  font-family: 'Nunito', 'Trebuchet MS', sans-serif;
+  background-color: #FFFAF6;
+  color: #1A1208;
+  min-height: 100vh;
+}
+
+/* ── Scrollable chips row — Tailwind can't hide scrollbars cross-browser ── */
+.chips-scroll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.chips-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Mobile menu toggle state ── */
+#mobile-menu        { display: none; }
+#mobile-menu.open   { display: flex; }
+
+/* ── Pantry item hover — translateX not composable with Tailwind group easily ── */
+.pantry-item {
+  transition: background .15s, transform .12s;
+}
+.pantry-item:hover {
+  background: #FFF4EC;
+  transform: translateX(4px);
+}
+
+/* ── Recipe card image zoom on card hover — requires child selector ── */
+.recipe-card:hover .card-thumb {
+  transform: scale(1.05);
+}
+.card-thumb {
+  transition: transform .4s ease;
+}
+
+/* ── Search input focus ring — Tailwind focus: ring doesn't match exact design token ── */
+.search-input:focus {
+  outline: none;
+  border-color: #E8600A;
+  box-shadow: 0 0 0 3px rgba(232, 96, 10, .12);
+}
+
+/* ── Native select: reset appearance + inject SVG chevron ── */
+.sort-select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237A6A58' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+.sort-select:focus {
+  outline: none;
+  border-color: #E8600A;
+}
