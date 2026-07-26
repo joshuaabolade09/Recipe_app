@@ -1,118 +1,101 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function NoResultFound() {
-  const navigate = useNavigate()
-    return (
-        <div className="mx-auto bg-[#FFF5EB] flex flex-col justify-center items-center pt-20 gap-4 antialiased">
-            <img src="/src/img/noImageFound.png" alt="No Recipe Image" className=" max-w-3xl w-[256px] object-contain"/>
+  const navigate = useNavigate();
 
-           <h2 className="md:text-4xl text-xl font-bold mt-4 text-amber-900">No results Found</h2>
-            <p className="md:text-base text-sm font-normal text-amber-900/70 mt-1 ">We couldn't find any recipes matching your search <br/> Try different ingredients or a new search</p>
-       
-           <button onClick={()=>navigate(-1)} className="block bg-orange-600 text-white hover:bg-orange-700 px-4 py-3 mt-2 rounded-md ">Try Another Search</button> 
+  return (
+    <div className="w-full min-h-[80vh] bg-[#FFF5EB] flex flex-col justify-center items-center px-4 py-16 text-center antialiased font-poppins">
+      
+      {/* Central Brand Illustration */}
+      <div className="relative max-w-xs w-48 md:w-56 aspect-square flex items-center justify-center">
+        <img 
+          src="/src/img/noImageFound.png" 
+          alt="No Recipe Image" 
+          className="w-full h-full object-contain filter drop-shadow-sm select-none"
+        />
+      </div>
+
+      {/* Primary Message */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight mt-6 text-amber-900">
+        No Results Found
+      </h2>
+      
+      <p className="max-w-md text-sm md:text-base font-medium text-amber-900/60 mt-2.5 leading-relaxed px-2">
+        We couldn't find any recipes matching your criteria. Try adjusting your ingredient filters or running a fresh search.
+      </p>
+
+      {/* Primary Action Button */}
+      <button 
+        onClick={() => navigate(-1)} 
+        className="inline-flex items-center justify-center bg-orange-500 text-white font-semibold text-sm md:text-base px-6 py-3 mt-6 rounded-xl hover:bg-orange-600 active:scale-95 shadow-md shadow-orange-500/10 hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-200 cursor-pointer"
+      >
+        Try Another Search
+      </button> 
+
+      {/* Decorative Text Divider */}
+      <div className="flex items-center gap-4 w-full max-w-xl mt-14 px-4">
+        <div className="flex-1 h-[1px] bg-amber-200/60"></div>
+        <p className="text-xs uppercase tracking-widest font-bold text-amber-800/50">Troubleshooting Tips</p>
+        <div className="flex-1 h-[1px] bg-amber-200/60"></div>
+      </div>      
+
+      {/* Dynamic Recommendation Grid */}
+      <div className="mt-8 grid w-full max-w-5xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-2">
         
-          <div className="flex flex-row items-center gap-3 max-w-3xl">
-    <div className="flex-1 h-[1px] bg-gray-600"></div>
-
-    <p className="text-sm text-amber-900">You can also</p>
-
-    <div className="flex-1 h-[1px] bg-gray-600"></div>
-</div>       
-
-<div className="mt-4 grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-  <div className="flex items-center gap-3 rounded-2xl border border-orange-100 bg-white px-5 py-4 shadow-[0_4px_14px_rgba(120,72,32,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-orange-100 hover:shadow-[0_10px_24px_rgba(120,72,32,0.12)]">
-    <svg
-      className="h-8 w-8 shrink-0 text-[#a85a1f]"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2.2" />
-      <path
-        d="M20 20L17 17"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-      />
-    </svg>
-
-    <p className="text-sm font-medium leading-snug text-amber-900">
-      Check your spelling
-    </p>
-  </div>
-
-  <div className="flex items-center gap-3 rounded-2xl border border-orange-100 bg-white px-5 py-4 shadow-[0_4px_14px_rgba(120,72,32,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-orange-100 hover:shadow-[0_10px_24px_rgba(120,72,32,0.12)]">
-    <svg
-      className="h-8 w-8 shrink-0"
-      viewBox="0 0 64 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M14 30C14 22 22 16 32 16C42 16 50 22 50 30V36H14V30Z" fill="#F59E0B" />
-      <path d="M18 36H46L42 48H22L18 36Z" fill="#D97706" />
-      <circle cx="24" cy="24" r="4" fill="#22C55E" />
-      <circle cx="34" cy="20" r="4" fill="#EF4444" />
-      <circle cx="42" cy="26" r="4" fill="#84CC16" />
-    </svg>
-
-    <p className="text-sm font-medium leading-snug text-amber-900">
-      Try more general terms
-    </p>
-  </div>
-
-  <div className="flex items-center gap-3 rounded-2xl border border-orange-100 bg-white px-5 py-4 shadow-[0_4px_14px_rgba(120,72,32,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-orange-100 hover:shadow-[0_10px_24px_rgba(120,72,32,0.12)]">
-    <svg
-      className="h-8 w-8 shrink-0"
-      viewBox="0 0 64 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect x="12" y="24" width="40" height="24" rx="4" fill="#C2410C" />
-      <path d="M12 28H52" stroke="#7C2D12" strokeWidth="2" />
-      <path
-        d="M22 20C22 16 26 14 29 16C32 10 40 12 40 18"
-        stroke="#84CC16"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <circle cx="26" cy="18" r="3" fill="#F97316" />
-      <circle cx="38" cy="18" r="3" fill="#22C55E" />
-    </svg>
-
-    <p className="text-sm font-medium leading-snug text-amber-900">
-      Use ingredients you have
-    </p>
-  </div>
-
-  <div className="flex items-center gap-3 rounded-2xl border border-orange-100 bg-white px-5 py-4 shadow-[0_4px_14px_rgba(120,72,32,0.08)] transition duration-300 hover:-translate-y-1 hover:bg-orange-100 hover:shadow-[0_10px_24px_rgba(120,72,32,0.12)]">
-    <svg
-      className="h-8 w-8 shrink-0 text-[#E7B97A]"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7 10V7C7 4.8 8.8 3 11 3H13C15.2 3 17 4.8 17 7V10"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path
-        d="M5 10H19V17C19 19.2 17.2 21 15 21H9C6.8 21 5 19.2 5 17V10Z"
-        fill="currentColor"
-        opacity="0.25"
-      />
-      <path d="M5 10H19" stroke="currentColor" strokeWidth="2" />
-    </svg>
-
-    <p className="text-sm font-medium leading-snug text-amber-900">
-      Explore our categories
-    </p>
-  </div>
-</div>
-
+        {/* Tip 1 */}
+        <div className="flex items-center gap-3.5 rounded-2xl border border-orange-100 bg-white p-4 shadow-sm shadow-amber-900/5 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-50/30 hover:shadow-md hover:border-orange-200">
+          <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-orange-50 text-orange-600 shrink-0">
+            <svg className="h-5 w-5 stroke-[2.2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" />
+              <path d="M20 20L17 17" stroke="currentColor" strokeLinecap="round" />
+            </svg>
+          </div>
+          <p className="text-sm font-semibold text-left text-amber-900 leading-snug">
+            Check your spelling
+          </p>
         </div>
-    )
+
+        {/* Tip 2 */}
+        <div className="flex items-center gap-3.5 rounded-2xl border border-orange-100 bg-white p-4 shadow-sm shadow-amber-900/5 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-50/30 hover:shadow-md hover:border-orange-200">
+          <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-orange-50 text-orange-600 shrink-0">
+            <svg className="h-5 w-5 stroke-[2.2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 6h18M3 12h14M3 18h10" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <p className="text-sm font-semibold text-left text-amber-900 leading-snug">
+            Try more general terms
+          </p>
+        </div>
+
+        {/* Tip 3 */}
+        <div className="flex items-center gap-3.5 rounded-2xl border border-orange-100 bg-white p-4 shadow-sm shadow-amber-900/5 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-50/30 hover:shadow-md hover:border-orange-200">
+          <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-orange-50 text-orange-600 shrink-0">
+            <svg className="h-5 w-5 stroke-[2.2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 21a9 9 0 100-18 9 9 0 000 18z" stroke="currentColor" />
+              <path d="M12 7v5l3 3" stroke="currentColor" strokeLinecap="round" />
+            </svg>
+          </div>
+          <p className="text-sm font-semibold text-left text-amber-900 leading-snug">
+            Use ingredients you have
+          </p>
+        </div>
+
+        {/* Tip 4 */}
+        <div className="flex items-center gap-3.5 rounded-2xl border border-orange-100 bg-white p-4 shadow-sm shadow-amber-900/5 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-50/30 hover:shadow-md hover:border-orange-200">
+          <div className="flex items-center justify-center h-10 w-10 rounded-xl bg-orange-50 text-orange-600 shrink-0">
+            <svg className="h-5 w-5 stroke-[2.2]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 5h16v14H4z" stroke="currentColor" />
+              <path d="M4 9h16M9 5v14" stroke="currentColor" />
+            </svg>
+          </div>
+          <p className="text-sm font-semibold text-left text-amber-900 leading-snug">
+            Explore our categories
+          </p>
+        </div>
+
+      </div>
+    </div>
+  );
 }
 
-export default NoResultFound
+export default NoResultFound;

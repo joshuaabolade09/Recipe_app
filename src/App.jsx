@@ -48,7 +48,7 @@ const [state, dispatch]= useReducer(uiReducer,initialState)
     <Route path="/" element={<HeaderLayout state={state} dispatch={dispatch} />}>
       {/* Nested Routes */}
       <Route index element={<Dashboard state={state} dispatch={dispatch} />} /> {/* Default route when path is "/" */}
-      <Route path="favourite" element={<Favourite state={state} dispatch={dispatch} />} />
+      <Route path="favourites" element={<Favourite state={state} dispatch={dispatch} />} />
       <Route path="loading" element={<Loading state={state} dispatch={dispatch}/>}/>
       <Route path="noResultFound" element={<NoResultFound state={state} dispatch={dispatch}/>}/>
       <Route path="SavedRecipe" element={<SavedRecipe state={state} dispatch={dispatch}/>}/>

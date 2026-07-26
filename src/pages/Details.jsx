@@ -1,5 +1,6 @@
 import "../index.css"
 import recipes from "../data/recipe.json"
+
 import {useNavigate, useSearchParams } from "react-router-dom";
 
 
@@ -26,7 +27,7 @@ function Details() {
 
   function openPlanner(e){
      
-     navigate(`/modal?plans=${planning}`)
+    navigate('/Planner')
 
   }
 
